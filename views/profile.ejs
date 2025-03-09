@@ -1,0 +1,52 @@
+<%- include('./partials/header') %>
+
+<div class="container mt-5">
+    <h2 class="text-center">Profil</h2>
+    <p class="text-center">Üdvözöljük, <%= username %>!</p>
+
+    <div class="row">
+        <!-- Profilkép szekció -->
+        <div class="col-md-6 text-center">
+            <h3>Profilkép</h3>
+            <% if (profilePicture) { %>
+                <img src="/uploads/<%= profilePicture %>" alt="Profilkép" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+            <% } else { %>
+                <p>Nincs profilkép.</p>
+            <% } %>
+
+            <form action="/profile/uploadProfilePicture" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="profilePicture" class="form-label">Válassz egy új profilképet:</label>
+                    <input type="file" class="form-control" id="profilePicture" name="profilePicture" required>
+                </div>
+                <button type="submit" class="btn btn-warning">Profilkép frissítése</button>
+            </form>
+        </div>
+
+        <!-- Vélemény írása -->
+        <div class="col-md-6">
+            <h3>Vélemény írása</h3>
+            <form action="/profile/review" method="POST">
+                <div class="mb-3">
+                    <label for="review" class="form-label">Vélemény:</label>
+                    <textarea class="form-control" id="review" name="review" rows="4" placeholder="Írj egy véleményt..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Mentés</button>
+            </form>
+        </div>
+
+        <!-- Képfeltöltés -->
+        <div class="col-md-12 mt-4">
+            <h3>Képfeltöltés</h3>
+            <form action="/profile/images" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="images" class="form-label">Válassz képeket (akár több is):</label>
+                    <input type="file" class="form-control" id="images" name="images" multiple>
+                </div>
+                <button type="submit" class="btn btn-success">Képek feltöltése</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('./partials/footer') %>

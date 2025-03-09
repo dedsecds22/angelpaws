@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Paws – Kisállat Temető</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <%- include('./partials/header') %>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="container text-center text-white">
+            <h1 class="display-4">Különleges hely, különleges lelkeknek</h1>
+            <br>
+            <h5 class="display-4">Kisállataink nem csupán házi kedvencek, hanem családtagok, akik életünk részei voltak</h5>
+        </div>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section class="container about-section text-center py-5">
+        <p class="fs-5">
+            Az Angel Paws kisállattemető méltó végső nyughelyet biztosít számukra, ahol békében pihenhetnek, 
+            emléküket pedig örökre megőrizhetjük. Nyugodt, gondosan ápolt környezetben kínálunk sírhelyeket, 
+            egyedi emléktáblákat és megemlékezési lehetőségeket, hogy szeretett társad emléke soha ne halványuljon el.
+        </p>
+        <div class="d-block d-md-none">
+            <!-- Mobilon teljes szélesség -->
+            <img src="/images/cemetery1.jpg" alt="Angel Paws Temető" class="img-fluid rounded shadow-lg mt-3 w-100">
+        </div>
+        <div class="d-none d-md-block">
+            <!-- Asztali nézetben 70% szélesség -->
+            <img src="/images/cemetery1.jpg" alt="Angel Paws Temető" class="img-fluid rounded shadow-lg mt-3" width="70%">
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="text-center bg-light py-3">
+        <p class="mb-0">&copy; 2025 Angel Paws – Minden jog fenntartva</p>
+        <p><a href="mailto:nglpws@gmail.com">nglpws@gmail.com</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

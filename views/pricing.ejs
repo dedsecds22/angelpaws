@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árak - Angel Paws</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Alap beállítások */
+    body {
+        font-family: 'Arial', sans-serif;
+        background: url('/images/clouds.jpg') no-repeat center center fixed; /* Fix háttér */
+        background-size: cover;
+        color: #222; /* Sötétebb szöveg */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Az oldal legalább a képernyő magassága */
+    }
+
+    /* Fő tartalom, hogy a footer az alján maradjon */
+    .container {
+        flex: 1;
+    }
+
+    /* Táblázat */
+    .table {
+        font-size: 1.3rem; /* Nagyobb betűméret */
+    }
+
+    /* Footer */
+    footer {
+        background: linear-gradient(to right, #fad336, #f7f3a6);
+        padding: 15px;
+        text-align: center;
+        font-weight: bold;
+        box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+        margin-top: auto; /* Footer mindig alul lesz */
+    }
+    h3{
+        background-color: rgba(255, 255, 255);
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <%- include('./partials/header') %>
+
+    <!-- Fő tartalom -->
+    <div class="container my-5">
+        <h1 class="text-center text-primary mb-4">Árlista</h1>
+
+        <div class="row">
+            <!-- Szolgáltatások táblázat -->
+            <div class="col-md-6">
+                <h3 class="text-warning">Szolgáltatások árai</h3>
+                <table class="table table-bordered table-hover bg-light">
+                    <tbody>
+                        <tr><td>Holttest szállítása és/vagy öltöztetése igény szerint</td></tr>
+                        <tr><td>Hamvasztás</td><td>200-500 lej</td></tr>
+                        <tr><td>Hamvak elhelyezése</td><td>100-300 lej</td></tr>
+                        <tr><td>Búcsúztatás</td><td>100 lej</td></tr>
+                        <tr><td>Preparálás</td><td>800-1200 lej</td></tr>
+                        <tr><td>Temetkezési hely bérlése 5 évre</td><td>200 lej</td></tr>
+                        <tr><td>Hosszabbítás (évente)</td><td>20 lej</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Termékek táblázat -->
+            <div class="col-md-6">
+                <h3 class="text-warning">Termékek árai</h3>
+                <table class="table table-bordered table-hover bg-light">
+                    <tbody>
+                        <tr><td>Koporsó</td><td>30-70 lej</td></tr>
+                        <tr><td>Urnák</td><td>70-500 lej</td></tr>
+                        <tr><td>Emléktábla</td><td>50-300 lej</td></tr>
+                        <tr><td>Ékszerek</td><td>50-5000 lej</td></tr>
+                        <tr><td>Cserép</td><td>30-300 lej</td></tr>
+                        <tr><td>Virág, koszorúk</td><td>Változó</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Kedvezmény információ -->
+        <div class="alert alert-info text-center mt-4">
+            <strong>💙 Több kisállat esetén -10% kedvezmény!</strong><br>
+            Az árak az állat méretétől függnek.
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Angel Paws | <a href="mailto:nglpws@gmail.com">nglpws@gmail.com</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
